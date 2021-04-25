@@ -13,7 +13,13 @@
 
 ################# FUNCTIONS #########################
 
-
+def input_Check(x):
+    try:
+        year = int(x)
+        return True
+    except ValueError:
+        print("That is not an integer year")
+        return False
     
 def whole_Number(x):
     # Means Whole number
@@ -24,9 +30,12 @@ def whole_Number(x):
 
 ###################### MAIN CODE #############################
 while True:
-    
+    # Input loop and check
+    while True:
+        year = input("Enter the year you would like to test: ")
+        if input_Check(year):
+            break
 
-    year = input("Enter the year you would like to test: ")
 
     # Main code
     while True:
